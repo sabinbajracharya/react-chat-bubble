@@ -1,7 +1,8 @@
 {
   "name": "react-chat-bubble",
-  "version": "0.8.4",
+  "version": "0.8.6",
   "description": "A chat bubble component for ReactJS",
+  "repository": "sabinbajracharya/react-chat-bubble",
   "main": "lib/ChatBubble.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

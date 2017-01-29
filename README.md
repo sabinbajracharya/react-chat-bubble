@@ -21,7 +21,7 @@ import ChatBubble from 'react-chat-bubble';
 
 class App extends Component {
   render() {
-      <ChatBubble messages = this.state.messages />
+      <ChatBubble messages = {this.state.messages} />
   }
 }
 export default App;
