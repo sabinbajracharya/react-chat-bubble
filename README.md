@@ -12,8 +12,7 @@ npm install --save react-chat-bubble
 
 ## Using the Component
 
-This project setup supports ES6 modules thanks to Babel.
-While you can still use `require()` and `module.exports`,  it is encouraged to use [`import` and `export`](http://exploringjs.com/es6/ch_modules.html) instead.
+If you are using ES6 modules, if not, you are encouraged to use [`import` and `export`](http://exploringjs.com/es6/ch_modules.html) instead.
 
 Example:
 
