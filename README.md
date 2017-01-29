@@ -44,7 +44,7 @@ this.state.messages =
 ```
 type = 0 for sender AND 1 for receiver
 image = url of contact image
-text = message form the user
+text = message from the user
 ```
 
 ## To-do
