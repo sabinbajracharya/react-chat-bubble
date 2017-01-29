@@ -1,6 +1,10 @@
 
 A Chat bubble component for building Chat App in ReactJS.
 
+---
+## Demo
+![Alt Chatbubble](https://raw.githubusercontent.com/sabinbajracharya/react-chat-bubble/master/screenshots/chatbubble.png?raw=true "Chatbubble")
+
 ## Installing the react-chat-bubble
 
 ```
