@@ -1,21 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import ChatBubble from "./components/ChatBubble";
 
-let messages = [
-  {
-    type:0,
-    image: 'http://www.bradfordwhite.com/sites/default/files/images/corporate_imgs/iStock_000012107870XSmall.jpg',
-    text: "Hello! Good Morning!"
-  },
-  {
-    type:1,
-    image: 'http://www.bradfordwhite.com/sites/default/files/images/corporate_imgs/iStock_000012107870XSmall.jpg',
-    text: "Hello! Good Afternoon!"
+
+const image = 'http://www.bradfordwhite.com/sites/default/files/images/corporate_imgs/iStock_000012107870XSmall.jpg';
+
+class App extends Component {
+  state = {
+    messages: [
+      {
+        type: 0,
+        image,
+        text: "Hello! Good Morning!"
+      },
+      {
+        type: 1,
+        image,
+        text: "Hello! Good Afternoon!"
+      }
+    ],
+  };
+
+  handleNewMessage = text =>
+    this.setState({
+      messages: this.state.messages.concat([{
+        text,
+        type: 0,
+        image,
+      }])
+    });
+
+  render() {
+    return (
+      <ChatBubble
+        messages={this.state.messages}
+        onNewMessage={this.handleNewMessage}
+      />
+    );
   }
-];
+}
 
 ReactDOM.render(
-  <ChatBubble messages={messages}/>,
+  <App/>,
   document.getElementById('root')
 );
