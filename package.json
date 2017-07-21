@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --progress --colors --watch -d",
     "build": "webpack --progress --colors --p",
-    "transpile": "babel ./src/components/ChatBubble.js --presets babel-preset-es2015 --out-file lib/ChatBubble.js"
+    "transpile": "babel ./src/components/ChatBubble.js --out-file lib/ChatBubble.js"
   },
   "keywords": [
     "chat",
@@ -21,10 +21,11 @@
   "author": "Sabin Bajracharya",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
-    "babel-preset-env": "^1.6.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.22.0",
     "css-loader": "^0.26.1",
     "style-loader": "^0.13.1",

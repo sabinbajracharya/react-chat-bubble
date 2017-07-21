@@ -77,6 +77,9 @@
   height: calc(100% - 3rem);
 
   overflow-y: scroll;
+
+  padding: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .new-message {
