@@ -67,3 +67,34 @@
   height:42px;
   width:42px;
 }
+
+.chats {
+  position: relative;
+  height: 100%;
+}
+
+.chat-list {
+  height: calc(100% - 3rem);
+  overflow-y: scroll;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.new-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #087FFE;
+  height: 3rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-message-input {
+  width: 99%;
+  height: 80%;
+  font-size: 1.5rem;
+}

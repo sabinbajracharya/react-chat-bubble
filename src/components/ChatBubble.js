@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import './ChatBubble.css';
 
 class ChatBubble extends Component {
+  state = {
+    newMessage: '',
+  }
 
   getConversations(messages){
-
     if(messages == undefined){
-      console.log("react-chat-bubble::", "'messages' props should be an array!");
       return;
     }
 
@@ -28,19 +30,52 @@ class ChatBubble extends Component {
     return listItems;
   }
 
+  handleSubmit = e => {
+    e.preventDefault()
+
+    const {props: {onNewMessage}, state: {newMessage}} = this
+
+    if(onNewMessage && newMessage) {
+      onNewMessage(newMessage)
+    }
+
+    this.setState({
+      newMessage: '',
+    })
+  }
+
+  handleInputChange = e => this.setState({
+    newMessage: e.target.value,
+  })
+
   render() {
-    const {messages} = this.props;
+    const {props: {messages}, state: {newMessage}} = this;
     const chatList = this.getConversations(messages);
+
     return (
       <div className="chats">
-        {chatList}
+        <div className="chat-list">
+          {chatList}
+        </div>
+         <form
+          className="new-message"
+          onSubmit={this.handleSubmit}
+         >
+          <input
+            value={newMessage}
+            placeholder="Write a new message"
+            onChange={this.handleInputChange}
+            className="new-message-input"
+          />
+        </form>
       </div>
     );
   }
 }
 
 ChatBubble.propTypes = {
-  messages: React.PropTypes.array
+  messages: PropTypes.array.isRequired,
+  onNewMessage: PropTypes.func.isRequired,
 };
 
 export default ChatBubble;
