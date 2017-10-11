@@ -1,6 +1,6 @@
 {
   "name": "react-chat-bubble",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "description": "A chat bubble component for ReactJS",
   "repository": "sabinbajracharya/react-chat-bubble",
   "main": "lib/ChatBubble.js",
